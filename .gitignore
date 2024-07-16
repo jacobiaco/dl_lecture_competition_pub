@@ -16,3 +16,4 @@ model.pth
 submission.npy
 try*
 vit*
+main.py
