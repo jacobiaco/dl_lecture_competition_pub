@@ -1,0 +1,410 @@
+#########################Kfold:1#########################                                                                                                                                                                                          
+【1/5】                                                                                                                                                                                                                                            
+train time: 1203.92 [s]                                                                                                                                                                                                                            
+train loss: 6.0457                                                                                                                                                                                                                                 
+train acc: 0.4648                                                                                                                                                                                                                                  
+train simple acc: 0.3710                                                                                                                                                                                                                           
+valid loss: 5.9636                                                                                                                                                                                                                                 
+valid acc: 0.4768                                                                                                                                                                                                                                  
+valid simple acc: 0.3802                                                                                                                                                                                                                           
+【2/5】                                                                                                                                                                                                                                            
+train time: 1156.52 [s]                                                                                                                                                                                                                            
+train loss: 4.9907                                                                                                                                                                                                                                 
+train acc: 0.4825                                                                                                                                                                                                                                  
+train simple acc: 0.3878                                                                                                                                                                                                                           
+valid loss: 5.5541                                                                                                                                                                                                                                 
+valid acc: 0.4788                                                                                                                                                                                                                                  
+valid simple acc: 0.3827                                                                                                                                                                                                                           
+【3/5】                                                                                                                                                                                                                                            
+train time: 1154.04 [s]                                                                                                                                                                                                                            
+train loss: 4.5900                                                                                                                                                                                                                                 
+train acc: 0.4851                                                                                                                                                                                                                                  
+train simple acc: 0.3909                                                                                                                                                                                                                           
+valid loss: 5.6191                                                                                                                                                                                                                                 
+valid acc: 0.4843                                                                                                                                                                                                                                  
+valid simple acc: 0.3888                                                                                                                                                                                                                           
+【4/5】                                                                                                                                                                                                                                            
+train time: 1157.26 [s]                                                                                                                                                                                                                            
+train loss: 4.2706                                                                                                                                                                                                                                 
+train acc: 0.4874                                                                                                                                                                                                                                  
+train simple acc: 0.3941                                                                                                                                                                                                                           
+valid loss: 5.5790                                          
+valid acc: 0.4842                                           
+valid simple acc: 0.3898                                    
+【5/5】                                                     
+train time: 1152.58 [s]                                     
+train loss: 3.9308                                          
+train acc: 0.4894                                           
+train simple acc: 0.3973                                    
+valid loss: 5.6463                                          
+valid acc: 0.4871                                           
+valid simple acc: 0.3918 
+#########################Kfold:2#########################                                                                                                                                                                                          
+【1/5】                                                                                                                                                                                                                                            
+train time: 1153.49 [s]                                                                                                                                                                                                                            
+train loss: 6.1169                                          
+train acc: 0.4618                                           
+train simple acc: 0.3682                                    
+valid loss: 5.4968                                          
+valid acc: 0.4990                                           
+valid simple acc: 0.4011                                    
+【2/5】                                                     
+train time: 1157.54 [s]                                     
+train loss: 4.9899                                          
+train acc: 0.4823                                           
+train simple acc: 0.3878                                    
+valid loss: 5.4832                                          
+valid acc: 0.4936                                           
+valid simple acc: 0.3991                                    
+【3/5】                                                     
+train time: 1155.07 [s]                                     
+train loss: 4.5936                                          
+train acc: 0.4848                                           
+train simple acc: 0.3905                                    
+valid loss: 5.5971                                          
+valid acc: 0.4976                                           
+valid simple acc: 0.4026                                    
+【4/5】                                                     
+train time: 1156.78 [s]                                     
+train loss: 4.2326                                          
+train acc: 0.4866                                           
+train simple acc: 0.3925                                    
+valid loss: 5.6652                                          
+valid acc: 0.5016                                           
+valid simple acc: 0.4039                                    
+【5/5】
+train time: 1160.19 [s]
+train loss: 3.8703
+train acc: 0.4892
+train simple acc: 0.3966
+valid loss: 5.6275
+valid acc: 0.5007
+valid simple acc: 0.4059
+#########################Kfold:3#########################
+【1/5】
+train time: 1199.16 [s]
+train loss: 5.9825
+train acc: 0.4678
+train simple acc: 0.3738
+valid loss: 5.4364
+valid acc: 0.4885
+valid simple acc: 0.3903
+【2/5】
+train time: 1172.94 [s]
+train loss: 4.9435
+train acc: 0.4833
+train simple acc: 0.3887
+valid loss: 5.4145
+valid acc: 0.4878
+valid simple acc: 0.3922
+3/5】                                                                                                                                                                                                                                  [614/1791]
+train time: 1176.72 [s]
+train loss: 4.5156
+train acc: 0.4867
+train simple acc: 0.3927
+valid loss: 5.6819
+valid acc: 0.4948
+valid simple acc: 0.3952
+【4/5】
+train time: 1177.78 [s]
+train loss: 4.1504
+train acc: 0.4876
+train simple acc: 0.3939
+valid loss: 5.7097
+valid acc: 0.4961
+valid simple acc: 0.4000
+【5/5】
+train time: 1174.82 [s]
+train loss: 3.7893
+train acc: 0.4877
+train simple acc: 0.3966
+valid loss: 5.6756
+valid acc: 0.4884
+valid simple acc: 0.3941
+#########################Kfold:4#########################
+【1/5】
+train time: 1177.73 [s]
+train loss: 6.0162
+train acc: 0.4659
+train simple acc: 0.3727
+valid loss: 5.6522
+valid acc: 0.4796
+valid simple acc: 0.3776
+【2/5】
+train time: 1173.53 [s]
+train loss: 4.9286
+train acc: 0.4851
+train simple acc: 0.3914
+valid loss: 5.6776
+valid acc: 0.4834
+valid simple acc: 0.3800
+【3/5】
+train time: 1173.77 [s]
+train loss: 4.5063
+train acc: 0.4887
+train simple acc: 0.3951
+valid loss: 5.6558
+valid acc: 0.4879
+valid simple acc: 0.3839
+【4/5】
+train time: 1172.85 [s]
+train loss: 4.1378
+train acc: 0.4911
+train simple acc: 0.3986
+valid loss: 5.8801
+valid acc: 0.4831
+valid simple acc: 0.3809
+【5/5】
+train time: 1173.07 [s]
+train loss: 3.7886
+train acc: 0.4934
+train simple acc: 0.4012
+valid loss: 5.9834
+valid acc: 0.4954
+valid simple acc: 0.3932
+#########################Kfold:5#########################                                                                                                                                                                                [549/1791]
+【1/5】
+train time: 1178.76 [s]
+train loss: 6.1139
+train acc: 0.4613
+train simple acc: 0.3672
+valid loss: 5.4025
+valid acc: 0.4962
+valid simple acc: 0.4033
+【2/5】
+train time: 1179.55 [s]
+train loss: 4.9787
+train acc: 0.4835
+train simple acc: 0.3885
+valid loss: 5.3652
+valid acc: 0.4943
+valid simple acc: 0.4009
+【3/5】
+train time: 1178.84 [s]
+train loss: 4.5870
+train acc: 0.4860
+train simple acc: 0.3912
+valid loss: 5.4434
+valid acc: 0.4994
+valid simple acc: 0.4077
+【4/5】
+train time: 1181.71 [s]
+train loss: 4.2353
+train acc: 0.4872
+train simple acc: 0.3927
+valid loss: 5.4243
+valid acc: 0.5010
+valid simple acc: 0.4121
+【5/5】
+train time: 1178.08 [s]
+train loss: 3.8642
+train acc: 0.4899
+train simple acc: 0.3966
+valid loss: 5.4965
+valid acc: 0.5026
+valid simple acc: 0.4136
+#########################Kfold:6#########################
+【1/5】
+train time: 1175.78 [s]
+train loss: 6.0782
+train acc: 0.4624
+train simple acc: 0.3689
+valid loss: 5.5123
+valid acc: 0.4755
+valid simple acc: 0.3888
+【2/5】
+train time: 1180.37 [s]
+train loss: 4.9922
+train acc: 0.4846
+train simple acc: 0.3890
+valid loss: 5.4510
+valid acc: 0.4752
+valid simple acc: 0.3878
+【3/5】
+train time: 1175.04 [s]
+train loss: 4.5964
+train acc: 0.4857
+train simple acc: 0.3899
+valid loss: 5.4830
+valid acc: 0.4763
+valid simple acc: 0.3863                                                                                                                                                                                                                 [484/1791]
+【4/5】
+train time: 1175.59 [s]
+train loss: 4.2648
+train acc: 0.4906
+train simple acc: 0.3945
+valid loss: 5.4847
+valid acc: 0.4864
+valid simple acc: 0.3995
+【5/5】
+train time: 1180.42 [s]
+train loss: 3.9221
+train acc: 0.4951
+train simple acc: 0.4000
+valid loss: 5.4785
+valid acc: 0.4876
+valid simple acc: 0.4000
+#########################Kfold:7#########################
+【1/5】
+train time: 1172.07 [s]
+train loss: 6.0866
+train acc: 0.4619
+train simple acc: 0.3688
+valid loss: 5.6899
+valid acc: 0.4730
+valid simple acc: 0.3690
+【2/5】
+train time: 1173.64 [s]
+train loss: 4.9609
+train acc: 0.4840
+train simple acc: 0.3900
+valid loss: 5.6502
+valid acc: 0.4811
+valid simple acc: 0.3762
+【3/5】
+train time: 1177.36 [s]
+train loss: 4.5409
+train acc: 0.4876
+train simple acc: 0.3945
+valid loss: 5.6832
+valid acc: 0.4812
+valid simple acc: 0.3782
+【4/5】
+train time: 1169.43 [s]
+train loss: 4.1790
+train acc: 0.4922
+train simple acc: 0.3988
+valid loss: 5.7891
+valid acc: 0.4851
+valid simple acc: 0.3778
+【5/5】
+train time: 1171.39 [s]
+train loss: 3.8079
+train acc: 0.4970
+train simple acc: 0.4043
+valid loss: 5.7200
+valid acc: 0.4872
+valid simple acc: 0.3822
+#########################Kfold:8#########################
+1/5】
+train time: 1177.85 [s]
+train loss: 6.0493
+train acc: 0.4600
+train simple acc: 0.3670
+valid loss: 5.7057
+valid acc: 0.4637
+valid simple acc: 0.3653
+【2/5】
+train time: 1173.74 [s]
+train loss: 4.9664
+train acc: 0.4835
+train simple acc: 0.3892
+valid loss: 5.8971
+valid acc: 0.4705
+valid simple acc: 0.3741
+【3/5】
+train time: 1171.37 [s]
+train loss: 4.5859
+train acc: 0.4878
+train simple acc: 0.3932
+valid loss: 5.7589
+valid acc: 0.4724
+valid simple acc: 0.3736
+【4/5】
+train time: 1176.20 [s]
+train loss: 4.2565
+train acc: 0.4894
+train simple acc: 0.3963
+valid loss: 5.8297
+valid acc: 0.4754
+valid simple acc: 0.3756
+【5/5】
+train time: 1175.11 [s]
+train loss: 3.9092
+train acc: 0.4913
+train simple acc: 0.3987
+valid loss: 5.9631
+valid acc: 0.4746
+valid simple acc: 0.3771
+#########################Kfold:9#########################
+【1/5】
+train time: 1172.49 [s]
+train loss: 6.0071
+train acc: 0.4684
+train simple acc: 0.3735
+valid loss: 5.9525
+valid acc: 0.4712
+valid simple acc: 0.3806
+【2/5】
+train time: 1174.45 [s]
+train loss: 4.9313
+train acc: 0.4861
+train simple acc: 0.3910
+valid loss: 5.3371
+valid acc: 0.4732
+valid simple acc: 0.3885
+【3/5】
+train time: 1172.46 [s]
+train loss: 4.5109
+train acc: 0.4892
+train simple acc: 0.3943
+valid loss: 5.4269
+valid acc: 0.4827                                                                                                                                                                                                                        [362/1791]
+valid simple acc: 0.3961
+【4/5】
+train time: 1171.77 [s]
+train loss: 4.1656
+train acc: 0.4911
+train simple acc: 0.3962
+valid loss: 5.5342
+valid acc: 0.4791
+valid simple acc: 0.3889
+【5/5】
+train time: 1170.30 [s]
+train loss: 3.7886
+train acc: 0.4925
+train simple acc: 0.4005
+valid loss: 5.6443
+valid acc: 0.4871
+valid simple acc: 0.3957
+#########################Kfold:10#########################
+【1/5】
+train time: 1172.24 [s]
+train loss: 6.1075
+train acc: 0.4632
+train simple acc: 0.3685
+valid loss: 5.8030
+valid acc: 0.4844
+valid simple acc: 0.3921
+【2/5】
+train time: 1173.64 [s]
+train loss: 4.9784
+train acc: 0.4831
+train simple acc: 0.3866
+valid loss: 5.5564
+valid acc: 0.4918
+valid simple acc: 0.3970
+【3/5】
+train time: 1173.40 [s]
+train loss: 4.5682
+train acc: 0.4861
+train simple acc: 0.3917
+valid loss: 5.4346
+valid acc: 0.4965
+valid simple acc: 0.4004
+【4/5】
+train time: 1173.58 [s]
+train loss: 4.2090
+train acc: 0.4894
+train simple acc: 0.3953
+valid loss: 5.5412
+valid acc: 0.4919
+valid simple acc: 0.3990
+【5/5】
+train time: 1170.20 [s]
+train loss: 3.8661
+train acc: 0.4892
+train simple acc: 0.3962
+valid loss: 5.6460
+valid acc: 0.4958
+valid simple acc: 0.4053

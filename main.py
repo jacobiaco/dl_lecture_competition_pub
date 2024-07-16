@@ -10,7 +10,8 @@ import torch
 import torch.nn as nn
 import torchvision
 from torchvision import transforms
-
+import transformers
+import matplotlib.pyplot as plt
 
 def set_seed(seed):
     random.seed(seed)
@@ -171,7 +172,7 @@ def VQA_criterion(batch_pred: torch.Tensor, batch_answers: torch.Tensor):
     return total_acc / len(batch_pred)
 
 
-# 3. モデルのの実装
+# 3. モデルの実装
 # ResNetを利用できるようにしておく
 class BasicBlock(nn.Module):
     expansion = 1
@@ -277,6 +278,57 @@ class ResNet(nn.Module):
         x = self.fc(x)
 
         return x
+    
+class VGG19(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.conv_net = nn.Sequential(
+            # input 224*224*3
+            nn.Conv2d(3, 64, 3, padding=1), 
+            nn.BatchNorm2d(64),
+            nn.ReLU(),
+            nn.Conv2d(64, 64, 3, padding=1),    # 224*224*64
+            nn.BatchNorm2d(64),
+            nn.ReLU(),
+            nn.MaxPool2d(2),    # 112*112*64
+
+            nn.Conv2d(64, 128, 3, padding=1),
+            nn.BatchNorm2d(128),
+            nn.ReLU(),
+            nn.Conv2d(128, 128, 3, padding=1),  # 112*112*64
+            nn.BatchNorm2d(128),
+            nn.ReLU(),
+            nn.MaxPool2d(2),    # 56*56*128
+
+            nn.Conv2d(128, 256, 3, padding=1),
+            nn.BatchNorm2d(256),
+            nn.ReLU(),
+            nn.Conv2d(256, 256, 3, padding=1),  # 56*56*256
+            nn.BatchNorm2d(256),
+            nn.ReLU(),
+            nn.MaxPool2d(2),    # 28*28*256
+
+            nn.Conv2d(256, 512, 3, padding=1),
+            nn.BatchNorm2d(512),
+            nn.ReLU(),
+            nn.Conv2d(512,512,3,padding=1),
+            nn.BatchNorm2d(512),
+            nn.ReLU(),
+            nn.MaxPool2d(2),    # 14*14*512
+            nn.Flatten(),
+            nn.Linear(14*14*512,512),
+            nn.ReLU(),
+            nn.Dropout(0.2),
+            # nn.Linear(256,256),
+            # nn.ReLU(),
+            # nn.Dropout(0.2),
+            # nn.Linear(256,10)
+        )
+        
+    def forward(self, x):
+        # print(x.shape)
+        x = self.conv_net(x)
+        return x
 
 
 def ResNet18():
@@ -290,18 +342,25 @@ def ResNet50():
 class VQAModel(nn.Module):
     def __init__(self, vocab_size: int, n_answer: int):
         super().__init__()
-        self.resnet = ResNet18()
+        # self.resnet = ResNet18()
+        self.resnet = VGG19()
         self.text_encoder = nn.Linear(vocab_size, 512)
 
         self.fc = nn.Sequential(
             nn.Linear(1024, 512),
             nn.ReLU(inplace=True),
-            nn.Linear(512, n_answer)
+            nn.Dropout(0.25),
+            nn.Linear(512,256),
+            nn.ReLU(inplace=True),
+            nn.Dropout(0.25),
+            nn.Linear(256, n_answer)
         )
 
     def forward(self, image, question):
-        image_feature = self.resnet(image)  # 画像の特徴量
-        question_feature = self.text_encoder(question)  # テキストの特徴量
+        image_feature = self.resnet(image)  # 画像の特徴量(dim=512)
+        print(question.shape)
+        question_feature = self.text_encoder(question)  # テキストの特徴量(dim=512)
+        print(question_feature.shape)
 
         x = torch.cat([image_feature, question_feature], dim=1)
         x = self.fc(x)
@@ -374,7 +433,6 @@ def main():
 
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=128, shuffle=True)
     test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=1, shuffle=False)
-
     model = VQAModel(vocab_size=len(train_dataset.question2idx)+1, n_answer=len(train_dataset.answer2idx)).to(device)
 
     # optimizer / criterion
@@ -383,13 +441,29 @@ def main():
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001, weight_decay=1e-5)
 
     # train model
+    hist_loss = []
+    hist_acc = []
+
     for epoch in range(num_epoch):
         train_loss, train_acc, train_simple_acc, train_time = train(model, train_loader, optimizer, criterion, device)
+        hist_loss.append(train_loss)
+        hist_acc.append(train_acc)
         print(f"【{epoch + 1}/{num_epoch}】\n"
               f"train time: {train_time:.2f} [s]\n"
               f"train loss: {train_loss:.4f}\n"
               f"train acc: {train_acc:.4f}\n"
               f"train simple acc: {train_simple_acc:.4f}")
+        
+    plt.plot(hist_loss)
+    plt.xlabel('epoch')
+    plt.ylabel('loss')
+    plt.savefig('figure/loss.png')
+    plt.show()
+    plt.plot(hist_acc)
+    plt.xlabel('epoch')
+    plt.ylabel('acc')
+    plt.savefig('figure/acc.png')
+    plt.show()
 
     # 提出用ファイルの作成
     model.eval()
